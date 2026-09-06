@@ -1,0 +1,27 @@
+﻿{
+  "name": "uniconnect-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "UniConnect – Student Skill & Collaboration Platform (Student Final-Course Project)",
+  "workspaces": [
+    "server",
+    "client",
+    "database"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install && npm --prefix database install",
+    "build:server": "npm --prefix server run build",
+    "build:client": "npm --prefix client run build",
+    "build": "npm run build:server && npm run build:client",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "db:migrate": "npm --prefix database run migrate",
+    "db:seed": "npm --prefix database run seed"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "author": "UniConnect Project Team",
+  "license": "UNLICENSED"
+}

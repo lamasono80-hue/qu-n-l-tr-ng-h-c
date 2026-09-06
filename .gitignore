@@ -1,0 +1,23 @@
+﻿# Node Dependencies
+node_modules/
+dist/
+build/
+*.log
+
+# Environment & Secrets
+.env
+.env.local
+.env.production
+*.pem
+*.key
+
+# OS / Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Database temp files
+*.sqlite
+*.sqlite3
+database/backups/
